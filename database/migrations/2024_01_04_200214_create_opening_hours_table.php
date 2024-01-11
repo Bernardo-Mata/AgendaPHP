@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('opening_hours', function (Blueprint $table) {
             $table->id();
             $table->integer('day');
+            $table->time('open');
             $table->time('close');
             $table->timestamps();
         });

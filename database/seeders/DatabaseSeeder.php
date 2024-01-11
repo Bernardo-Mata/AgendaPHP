@@ -24,13 +24,15 @@ class DatabaseSeeder extends Seeder
 
         $userAdmin = \App\Models\User::factory()->create([
             'name' =>'Bernardo',
-            'email' => 'matabernardo2@gmail.com'
+            'email' => 'matabernardo2@gmail.com',
+            'password' => '2016870Laravel'
         ]);
         $userAdmin->assignRole('admin');
 
         $userStaff = \App\Models\User::factory()->create([
-            'name' =>'Bernardo',
-            'email' => 'matabernardo2@gmail.com'
+            'name' =>'Bernardo1',
+            'email' => 'matabernardo02@gmail.com',
+            'password' => 'Laravel2016870'
         ]);
         $userStaff->assignRole('staff');
 

@@ -18,9 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('about', 'about');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/my-schedule', function () {
+    return view('my-schedule.index');
+})->middleware(['auth', 'verified'])->name('my-schedule');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
